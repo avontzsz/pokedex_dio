@@ -1,0 +1,131 @@
+/* Grid de Pokémon */
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Tipos de Pokémon - Cores de fundo */
+.normal { background-color: #a6a877; }
+.grass { background-color: #77c850; }
+.fire { background-color: #ee7f30; }
+.water { background-color: #678fee; }
+.electric { background-color: #f7cf2e; }
+.ice { background-color: #98d5d7; }
+.ground { background-color: #dfbf69; }
+.flying { background-color: #a98ff0; }
+.poison { background-color: #a040a0; }
+.fighting { background-color: #bf3029; }
+.psychic { background-color: #f65687; }
+.dark { background-color: #725847; }
+.rock { background-color: #b8a137; }
+.bug { background-color: #a8b720; }
+.ghost { background-color: #6e5896; }
+.steel { background-color: #b9b7cf; }
+.dragon { background-color: #6f38f6; }
+.fairy { background-color: #f9aec7; }
+
+/* Estilos do Pokémon */
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fff; /* Adicionei um fundo branco para contraste */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra leve */
+}
+
+/* Número do Pokémon */
+.pokemon .number {
+    color: #000;
+    opacity: 0.3;
+    text-align: right;
+    font-size: 0.625rem;
+}
+
+/* Nome do Pokémon */
+.pokemon .name {
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 0.25rem;
+    font-size: 1rem; /* Ajustado o tamanho da fonte */
+}
+
+/* Detalhes do Pokémon */
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Tipos de Pokémon na seção de detalhes */
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type {
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: 0.625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+/* Imagem do Pokémon */
+.pokemon .detail img {
+    max-width: 100%;
+    height: 70px;
+}
+
+/* Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: 0.625rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer; /* Adicionei cursor pointer para melhor usabilidade */
+    transition: background-color 0.3s; /* Adicionei transição para suavizar a mudança de cor */
+}
+
+.pagination button:hover {
+    background-color: #5a68c8; /* Cor de fundo ao passar o mouse */
+}
+
+/* Responsividade */
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
